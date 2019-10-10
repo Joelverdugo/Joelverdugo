@@ -1,0 +1,184 @@
+body{
+	margin: 0;
+	background-color: #C8C4C4;
+}
+
+.row{
+	display: flex;
+}
+.header{
+	background-color: #BD0000;
+	box-sizing: border-box;
+	padding-top: 40px;
+	position: relative;
+}
+.header.logo{
+	width: 25%;
+}
+.header .logo h1{
+	color: #ffffff;
+	margin: 0;
+}
+.header .menu{
+	text-align: right;
+	width: 85%;
+	position: relative;
+}
+.header .menu input [type="checkbox"], .header .menu span{
+	display: none;
+}
+.header .menu ul {
+	display: inline-block;
+	margin-left: 100px;
+}
+.header .menu ul li{
+	display: inline-block;
+	margin-left: 40px;
+}
+.header .menu ul li:not(:first-child){
+	margin-left: 40px;
+}
+.header .menu  a {
+	color: #ffffff;
+	text-decoration: none;
+}
+.selected, .header .menu  a:hover{
+	border-bottom: 3px solid white;
+	padding-bottom: 3px;
+	transition: 0.4s border;
+}
+.banner{
+	color: white;
+	padding-top: 50px;
+	
+}
+
+.banner-img{
+	width: 100%;
+	height: 500px;
+	background-size: 100% 100%;
+}
+
+.content{
+	margin: 0px;
+}
+.services{
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+
+}
+.services h2 {
+	color: #000000;	
+	font-size: 35px;
+	margin-bottom: 10px;
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+}
+
+.services-content{
+	display: flex;
+	box-sizing: border-box;
+	margin-top: 30px;
+}
+.service{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.space{
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.service-img{
+	width: 300px;
+	height: 180px;
+	background-size: 100% 100%;
+
+}
+.service-description{
+	text-align: center;
+}
+.footer{
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	background-color: #BD0000;
+	margin-top: 20px;
+	padding: 20px 0;
+	color: #ffffff;
+	
+}
+/*resonsive design zone*/
+@media screen and (max-width: 1023px){
+	.header {
+		height: auto;
+		padding-bottom: 20px;
+	}
+	.header .row{
+		flex-direction: column;
+	}
+	.header .menu{
+		width: 100%;
+	}
+	.banner {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding-top: 20px;
+	}
+	.banner .banner-img{
+		position: static;
+	}
+
+}
+@media screen and (max-width: 767px){
+	.services-content{
+		flex-wrap: wrap;
+		justify-content: space-around;
+	}
+	.service{
+		width: 45%;
+	}
+}
+@media screen and (max-width: 668px){
+	.header .menu ul{
+		display:none
+	}
+	.header .menu input[type="checkbox"]{
+		display: block;
+		width: 40px;
+		height: 32px;
+		position: absolute;
+		top: -7px;
+		left: -5px;
+		z-index: 2;
+		opacity: 0;
+	}
+	.header .menu span{
+		display: block;
+		width: 33px;
+		height: 4px;
+		margin-bottom: 5px;
+		position: relative;
+		background-color: #ffffff;
+		border-radius: 3px;
+		z-index: 1;
+	}
+	.header .menu input:checked ~ ul{
+		display: block;
+	}
+	.banner .banner-img{
+		width: 100%;
+		height: 400px;
+		background-size: 100% 100%;
+	}
+	.services-content{
+	flex-direction: row;
+}
+	.service{
+		width: 100%;
+	}
+}
